@@ -21,8 +21,17 @@
 4. Add new vertex with a property `:> g.addV("Person").property("name","John Doe")`
 5. Add new vertex with multiple properties `:> g.addV("Person").property("name","John Doe Key").property("id","101")`
 6. Add new vertex with with specified id `:> g.addV("Person").property("name","John Doe ID").property(id,"102")`
-7. Create edge between two vertexis `:> g.addE("FRIEND").from(__.V().has("name","John Doe")).to(__.V().has("name","John Doe Key"))`
-8. Create edge with properties between two vertexis `:> g.addE("FRIEND").property("type","best").from(__.V().has("name","John Doe Key")).to(__.V().has("name","John Doe"))`
+7. Create edge between two vertexis
+
+- `:> g.addE("FRIEND").from(__.V().has("name","John Doe")).to(__.V().has("name","John Doe Key"))`
+- `:> g.addE("FRIEND").from(__.V().has("name","John Doe")).to(__.V().has("name","John Doe Key"))`
+
+8. Create edge with properties between two vertexis
+
+- `:> g.addE("FRIEND").property("type","best").from(__.V().has("name","John Doe Key")).to(__.V().has("name","John Doe"))`
+- `:> g.addE("TEACHER").property("subject","AI").from(__.V().has("name","John Doe Key")).to(__.V().has("name","John Doe"))`
+- `:> g.addE("FRIEND").property("type","best").from(__.V().has("name","John Doe ID")).to(__.V().has("name","John Doe"))`
+
 9. Get all vertexes and ids `:> g.V()`
 10. Get all edges and ids `:> g.E()`
 11. Get vertexes count `:> g.V().count()`
@@ -33,3 +42,14 @@
 16. Get all edges with specific property `:> g.E()has("type","best")`
 17. Get all vertexes with specific label and property `:> g.V()has("Person","name","John Doe")`
 18. Get all edges with specific label and property `:> g.E()has("FRIEND","type","best")`
+19. We have set of terminal commands we use with naptune, those commands terminate the triversal
+20. To check how many vertexes are on the other end of the incomming edge `:> g.V().in()`
+21. To check how many edges are comming in a vertex `:> g.V().inE()`
+22. To check how many vertexes are on the incomming end of the edges `:> g.V().out()`
+23. To check how many edges are going out of a vertex `:> g.V().outE()`
+24. `:> g.V().both()`
+25. `:> g.V().bothE()`
+26. Vertex with all properties `:> g.V().valueMap()`
+27. Edges with all properties `:> g.E().valueMap()`
+28. All Vertex with all details `:> g.V().elementMap()`
+29. All edges with all details `:> g.E().elementMap()`
