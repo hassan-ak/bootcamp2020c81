@@ -15,7 +15,10 @@
 
 ## Run Queries
 
-1. Delete all data already on server `:> g.V().drop()`
+1. Delete all data already on server
+
+- `:> g.V().drop()`
+
 2. Add new vertex `:> g.addV("Person")`
 3. for viewing graph in visulizer `:> g.V()`
 4. Add new vertex with a property `:> g.addV("Person").property("name","John Doe")`
@@ -24,7 +27,7 @@
 7. Create edge between two vertexis
 
 - `:> g.addE("FRIEND").from(__.V().has("name","John Doe")).to(__.V().has("name","John Doe Key"))`
-- `:> g.addE("FRIEND").from(__.V().has("name","John Doe")).to(__.V().has("name","John Doe Key"))`
+- `:> g.addE("FRIEND").from(__.V().has("name","John Doe ID")).to(__.V().has("name","John Doe Key"))`
 
 8. Create edge with properties between two vertexis
 
@@ -53,3 +56,10 @@
 27. Edges with all properties `:> g.E().valueMap()`
 28. All Vertex with all details `:> g.V().elementMap()`
 29. All edges with all details `:> g.E().elementMap()`
+30. All out vertixes of a vertex`:> g.V().has("name","John Doe ID").out()`
+31. All out vertixes to second level of a vertex`:> g.V().has("name","John Doe ID").out().out()`
+32. Get all vertexes and save into some variable then filter bases on a property and display that property `:> g.V().as('a').properties("name").select('a').by('name')`
+33. Get all vertexes and save into some variable then filter bases on a property and display that property with id `:> g.V().as('a').properties("name").as('b').select('a','b').by('name').by(id)`
+34. Get a property of all the vertixes on the other end of all the edges of a vertex `:> g.V(id).out().values('name')`
+35. Get a property of all the vertixes on the other end of all the edges of a vertex and then the in vertexes of that `:> g.V(id).out().in().values('name')`
+36. `:> g.V(id).out().hasNext()`
