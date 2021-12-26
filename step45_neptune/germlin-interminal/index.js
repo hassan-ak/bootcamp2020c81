@@ -1,4 +1,5 @@
 const Germlin = require('gremlin');
+const __ = Germlin.process.statics;
 
 const connection = new Germlin.driver.DriverRemoteConnection(
   'ws://localhost:8182/gremlin'
