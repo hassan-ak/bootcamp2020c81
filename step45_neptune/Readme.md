@@ -1,5 +1,11 @@
 # Step45 - Learning Neptune, Graph Data Modeling, Gremlin, Graphs, AI, and Machine Learning
 
+## Reading Material
+
+- [TinkerPop Documentation](https://tinkerpop.apache.org/docs/current/reference/)
+- [Getting Started](https://tinkerpop.apache.org/docs/3.5.1/tutorials/getting-started/)
+- [Gremlin Console](https://tinkerpop.apache.org/docs/3.5.1/reference/#gremlin-console)
+
 ## Class Notes
 
 - Install [Gremlin Server](https://dlcdn.apache.org/tinkerpop/3.5.1/apache-tinkerpop-gremlin-server-3.5.1-bin.zip)
